@@ -8,11 +8,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 html {
   font-size: 125%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Catamaran', sans-serif;
   overflow-x: hidden;
+  width: 100%;
 }
 p {
   font-size: .9rem;
@@ -94,7 +96,6 @@ header {
   position: absolute;
   top: 5vw;
   right: 5vw;
-  
   z-index: 1;
   
   -webkit-user-select: none;
@@ -153,11 +154,12 @@ header {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
+
 .popoutMenu {
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 100vh;
-  margin: -5vw 0 0 0;
+  margin: 0;
   padding: 50px;
   padding-top: 125px;
   right: -100px;
