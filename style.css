@@ -8,12 +8,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 html {
   font-size: 125%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: 'Catamaran', sans-serif;
-  overflow-x: hidden;
   width: 100%;
 }
 p {
@@ -90,7 +88,7 @@ header {
   position: relative;
 }
 
-/* Eric Terwan's Pure CSS Mobile Menu from https://codepen.io/erikterwan/pen/grOZxx */
+/* CSS Hamburger Menu adapted from https://codepen.io/jlnljn/pen/LkXoBb */
 .menu span {
   text-transform: none;
   opacity: 1;
@@ -186,7 +184,7 @@ ul.popoutMenu  {
 }
 .socialIcons ul {
   position: absolute;
-  bottom: 0;
+  bottom: 10vh;
   left: 50%;
   margin-left: -64px;
   padding: 0;
@@ -387,35 +385,7 @@ footer button {
   .menu li:first-of-type {
     text-align: left;
   }
-  /* .menu {
-    display: none;
-  }
-  .desktopMenu {
-    display: block;
-  }
-  .desktopMenu ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  }
-  .desktopMenu li {
-    margin-right: 2.66%;
-    display: inline-block;
-  }
-  .desktopMenu li:last-of-type {
-    margin-right: 0px;
-    text-align: right;
-  }
-  .desktopMenu li:first-of-type {
-    text-align: left;
-  }
-  .desktopMenu li:first-of-type > a {
-    color: #e85b26;
-  }
-  .desktopMenu a {
-    color: #186684;
-  } */
+  
   .socialIcons {
     display: inline;
     position: absolute;
@@ -484,7 +454,7 @@ footer button {
   }
   .givingBack .insideBox {
     width: 70%;
-    padding-left: 5%;
+    margin-left: 5%;
   }
   .iconSection {
     padding: 100px;
