@@ -77,10 +77,6 @@ img {
   width: 100%;
 }
 
-section { 
-  
-}
-
 .skipLink {
   position: absolute;
   left: -1000px;
@@ -417,6 +413,7 @@ footer button {
   p {
     font-size: 1rem;
   }
+
   .menu input, 
   .menu label, 
   .menu span {
@@ -505,6 +502,11 @@ footer button {
     width: 50%;
     min-height: 600px;
     clear: right;
+  }
+
+  .wrapper.left,
+  .wrapper.right {
+    max-width: none;
   }
 
   .insideBox {
