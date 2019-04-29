@@ -6,6 +6,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+/* Main Styles */
 html {
   font-size: 125%;
 }
@@ -80,7 +81,30 @@ section {
   
 }
 
-/* Begin header */
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  border: solid 1px red;
+  color: black;
+  padding: 20px;
+}
+
+.skipLink:focus {
+  left: 10px;
+  top: 10px;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Header */
 header {
   background: #fff url('images/header.jpg') 50% 50% / cover;
   height: 100vh;
@@ -88,16 +112,24 @@ header {
   position: relative;
 }
 
-/* CSS Hamburger Menu adapted from https://codepen.io/jlnljn/pen/LkXoBb */
+.title {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+}
+
+/* CSS Only Hamburger Menu adapted from https://codepen.io/jlnljn/pen/LkXoBb */
 .menu span {
   text-transform: none;
   opacity: 1;
   font-weight: 300;
   font-size: 12px;
 }
+
 .menu input {
   opacity: 0;
 }
+
 .menu input + label {
   position: absolute;
   top: 40px;
@@ -106,6 +138,7 @@ header {
   width: 40px;
   z-index: 5;
 }
+
 .menu input + label span {
   position: absolute;
   width: 100%;
@@ -118,27 +151,34 @@ header {
   transition: 0.5s;
   border-radius: 2px;
 }
+
 .menu input + label span:first-child {
   top: 2px;
 }
+
 .menu input + label span:last-child {
   top: 18px;
 }
+
 .menu label:hover {
   cursor: pointer;
 }
+
 .menu input:checked + label span {
   opacity: 0;
   top: 50%;
 }
+
 .menu input:checked + label span:first-child {
   opacity: 1;
   transform: rotate(225deg);
 }
+
 .menu input:checked + label span:last-child {
   opacity: 1;
   transform: rotate(-225deg);
 }
+
 .menu nav {
   background: white;
   position: absolute;
@@ -151,6 +191,7 @@ header {
   transition-delay: 0.5s;
   overflow: hidden;
 }
+
 ul.popoutMenu  {
   text-align: center;
   position: absolute;
@@ -160,28 +201,38 @@ ul.popoutMenu  {
   list-style: none;
   padding: 0;
 }
+
 .popoutMenu li {
   opacity: 0;
   transition: 0.5s;
   transition-delay: 0s;
 }
+
 .popoutMenu a {
   text-decoration: none;
   display: block;
   padding: 10px;
   color: #186684;
 }
+
+.popoutMenu a:hover {
+  color: #e85b26;
+}
+
 .popoutMenu li:first-of-type > a {
   color: #e85b26;
 }
+
 .menu input:checked ~ nav {
   height: 100%;
   transition-delay: 0s;
 }
+
 .menu input:checked ~ nav > ul > li {
   opacity: 1;
   transition-delay: 0.5s;
 }
+
 .socialIcons ul {
   position: absolute;
   bottom: 10vh;
@@ -189,23 +240,18 @@ ul.popoutMenu  {
   margin-left: -64px;
   padding: 0;
 }
+
 .socialIcons li {
   display: inline-block;
   padding-right: 10px;
   padding-top: 30px;
 }
+
 .socialIcons i {
     color: #e85b26
 }
-/* END OF MOBILE MENU */
-.desktopMenu {
-  display: none;
-}
-.title {
-  position: absolute;
-  bottom: 20%;
-  right: 10%;
-}
+
+/* Main Content */
 .imageBox {
   height: 50%;
   width: 100%;
@@ -217,85 +263,100 @@ ul.popoutMenu  {
 .imageBox.left {
   background: #fff url('images/image1.jpg') center / cover;
 }
+
 .textBox {
   text-align: center;
 }
-.wrapper {
-  width: 90%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 50px 0;
-}
+
 .givingBack {
   background: #f4f4f4;
 }
+
 .iconSection {
   background: #fff url('images/image5.jpg') center / cover;
   padding: 50px;
 }
+
 .iconBox {
   background: #f4f4f4;
   padding: 50px 20px;
   max-width: 300px;
   margin: 0 auto;
 }
+
 .icon {
   text-align: center;
 }
+
 .icon i {
   font-size: 3rem;
   color: #e85b26;
   margin-bottom: 20px;
 }
+
 .icon h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
+
 .socialPhotos img {
   width: 47.5%;
   float: left;
   padding-top: 50px;
 }
+
 .socialPhotos img:first-of-type {
   margin-right: 5%;
 }
+
 .socialPhotos img:last-child {
   display: none;
 }
+
+/* Footer */
 footer {
   background: #eee;
 }
+
 footer nav ul {
   list-style: none;
   margin: 20px auto 0;
   padding: 0;
   text-align: center;
 }
+
 footer li {
   margin-right: 2.66%;
   display: inline-block;
 }
+
 footer li:last-of-type {
   margin-right: 0px;
   text-align: right;
 }
+
 footer li:first-of-type {
   text-align: left;
 }
+
 footer h3, footer p, footer input[type="email"] {
   margin: 6px 0;
 }
+
 footer input[type="email"] {
   padding: 5px 20px;
 }
+
 footer h3 {
   font-size: 1.25rem;
   color: #e85b26;
 }
+
 footer p {
   margin: 0;
   text-align: center;
 }
+
 footer input, footer button {
   width: 100%;
   border: none;
@@ -306,20 +367,24 @@ footer input, footer button {
   margin-top: 6px;
   height: 50px;
 }
+
 footer .wrapper {
   padding: 20px 0;
 }
+
 footer button {
   background: #186684;
   color: #FFF;
   border: 3px #fa3d06 solid;
   margin-bottom: 30px;
 }
+
 .copyright {
   background: #000;
   height: 45px;
   clear: both;
 }
+
 .copyright p {
   color: #fcfcfc;
   opacity: 0.5;
@@ -333,6 +398,8 @@ footer button {
     background: #fff url('images/header.jpg') 35% 50% / cover;
   }
 }
+
+/* Wider Screen Styles */
 @media only screen and (min-width: 400px) {
   h1 {
     font-size: 3.75rem;
@@ -355,6 +422,7 @@ footer button {
   .menu span {
     display: none;
   }
+
   .menu nav {
     background: none;
     position: static;
@@ -364,6 +432,7 @@ footer button {
     transition: 0ms;
     transition-delay: 0ms;
   }
+
   .menu ul.popoutMenu  {
     list-style: none;
     margin: 0 auto;
@@ -371,6 +440,7 @@ footer button {
     text-align: center;
     position: static;
   }
+
   .menu .popoutMenu li {
     opacity: unset;
     transition: unset;
@@ -378,12 +448,18 @@ footer button {
     margin-right: 2.66%;
     display: inline-block;
   }
+
   .menu li:last-of-type {
     margin-right: 0px;
     text-align: right;
   }
+
   .menu li:first-of-type {
     text-align: left;
+  }
+
+  .menu a:hover {
+    border-bottom: #e85b26 solid 3px;
   }
   
   .socialIcons {
@@ -392,43 +468,53 @@ footer button {
     right: 70px;
     top: 300px;
   }
+
   .socialIcons ul {
     position: static;
     margin: 0;
     list-style: none;
   }
+
   .socialIcons li {
     display: block;
     padding-right: 0px;
     padding-top: 10px;
   }
+
   .socialIcons a {
     color: #e85b26
   }
+
   .title {
     right: 20%;
   }
+
   .textBox {
     padding: 150px 0;
   }
+
   .left {
     float: left;
     width: 50%;
     min-height: 600px;
     clear: left;
   }
+
   .right {
     float: right;
     width: 50%;
     min-height: 600px;
     clear: right;
   }
+
   .insideBox {
     width: 80%; 
   }
+
   .insideBox p, .insideBox h2 {
     text-align: left;
   }
+
   .insideBox button {
     margin-left: 0;
   }
@@ -438,27 +524,34 @@ footer button {
     margin-right: auto;
     margin-left: 10%;
   }
+
   .left .insideBox {
     max-width: calc(640px - 10%);
     margin-left: auto;
     margin-right: 10%;
   }
+
   .givingBack .insideBox, .previewImage {
     float: left;
   }
+
   .previewImage {
     width: 25%;
   }
+
   .givingBack {
     padding: 50px 0;
   }
+
   .givingBack .insideBox {
     width: 70%;
     margin-left: 5%;
   }
+
   .iconSection {
     padding: 100px;
   }
+
   .icon {
     float: left;
     width: 30%;
@@ -472,44 +565,56 @@ footer button {
     max-width: 760px;
     padding: 75px 50px;
   }
+
   .socialPhotos.wrapper {
     padding: 100px 0px
   }
+
   .socialPhotos img {
     width: 30%;
     margin-right: 5%;
     padding-top: 100px;
   }
+
   .socialPhotos img:last-child {
   display: block;
   margin-right: 0;
   }
+
   footer .wrapper {
     padding: 15px 0;
   }
+
   footer {
     padding-top: 65px;
   }
+
   footer h3 {
     font-size: 2.1rem;
     padding-bottom: 15px;
   }
+
   footer h3, footer p, footer input[type="email"] {
     text-align: left;
   }
+
   footer .left, footer .right {
     min-height: 0;
     padding-bottom: 100px;
   }
+
   form > * {
     float: left;
   }
+
   form input[type="email"] {
     width: 70%;
   }
+
   form button {
     width: 30%;
   }
+  
   .copyright p {
     text-align: center;
   }

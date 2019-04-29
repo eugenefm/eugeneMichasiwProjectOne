@@ -12,6 +12,7 @@
 </head>
 <body>
   <header>
+    <a href="#mainContent" class="skipLink">Skip to main content.</a>
     <div class="menu">
       <input id="burger" type="checkbox" />
       <label for="burger">
@@ -48,7 +49,7 @@
       <h1>Foot<br>Forward</h1>
     </div>
   </header>
-  <main>
+  <main id="mainContent">
     <section class="clearfix">
       <div class="imageBox right">
       </div>
@@ -114,7 +115,7 @@
     </section>
   </main>
   <footer class="clearfix"> 
-    <nav class="wrapper clearfix">
+    <nav class="wrapper">
       <ul class="">
         <li><a href="">Home</a></li>
         <li><a href="">About</a></li>
@@ -135,7 +136,8 @@
         <h3>Stay updated</h3>
         <p>Subscribe to our newsletter to stay updated.</p>
         <form class="clearfix">
-          <input type="email" placeholder="email address">
+          <input type="email" placeholder="email address" id="email">
+          <label for="email" class="visuallyHidden">Enter Email</label>
           <button>Subscribe</button>
         </form>
       </div>
