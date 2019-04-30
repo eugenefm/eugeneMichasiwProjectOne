@@ -272,6 +272,10 @@ ul.mainMenu  {
 .givingBack {
   background: #f4f4f4;
 }
+.previewImage {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
 .iconSection {
   background: #fff url('images/image5.jpg') center / cover;
