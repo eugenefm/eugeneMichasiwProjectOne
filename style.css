@@ -105,6 +105,7 @@ header {
   background: #fff url('images/header.jpg') 50% 50% / cover;
   height: 100vh;
   max-height: 800px;
+  min-height: 320px;
   position: relative;
   overflow: hidden;
 }
