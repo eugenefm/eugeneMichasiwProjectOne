@@ -106,12 +106,16 @@ header {
   height: 100vh;
   max-height: 800px;
   position: relative;
+  overflow: hidden;
 }
 
 .title {
   position: absolute;
-  bottom: 20%;
+  top: calc(80% - 6rem);
   right: 10%;
+}
+.title span {
+  display: block;
 }
 
 /* CSS Only Hamburger Menu adapted from https://codepen.io/jlnljn/pen/LkXoBb */
@@ -403,10 +407,19 @@ footer button {
   h2 {
     font-size: 2.1rem;
   }
+  .title {
+  top: calc(80% - 7.5rem);
+  }
 }
 @media only screen and (min-width: 800px) {
   h1 {
     font-size: 7.3rem;
+  }
+  header { 
+    min-height: 500px;
+  }
+  .title {
+  top: calc(80% - 14rem);
   }
 }
 @media only screen and (min-width: 960px) {
